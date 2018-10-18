@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CEFD51F4-FF4D-4F96-8DD1-13EAD31EA827}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>A18_Ex03_Guy_203507926_Ben_302823927</RootNamespace>
+    <AssemblyName>A18_Ex03_Guy_203507926_Ben_302823927</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Facebook">
+      <HintPath>..\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="FbGraphApiWrapper">
+      <HintPath>..\FbGraphApiWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="RibbonMenuButtonControl, Version=1.0.2710.16434, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\RibbonMenuButtonControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Logics\eFilterStyler.cs" />
+    <Compile Include="Logics\FBAuthenticator.cs" />
+    <Compile Include="Logics\FilterByLocation.cs" />
+    <Compile Include="Logics\FilterByTaggedFriends.cs" />
+    <Compile Include="Logics\FormUtils.cs" />
+    <Compile Include="Logics\Horoscope.cs" />
+    <Compile Include="Logics\PhotoFilterStyler.cs" />
+    <Compile Include="Logics\PhotoForShow.cs" />
+    <Compile Include="Logics\PopulaterFacade.cs" />
+    <Compile Include="Logics\Temperature.cs" />
+    <Compile Include="Logics\TSItemCommand.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Logics\UserEvents.cs" />
+    <Compile Include="Logics\WeatherUtils\Weather.cs" />
+    <Compile Include="Logics\WeatherUtils\WeatherCondition.cs" />
+    <Compile Include="Logics\WeatherUtils\WeatherException.cs" />
+    <Compile Include="Logics\WeatherUtils\WeatherFetcherCached.cs" />
+    <Compile Include="Logics\WeatherUtils\WeatherLocation.cs" />
+    <Compile Include="Logics\WeatherUtils\WeatherNodes.cs" />
+    <Compile Include="Logics\WeatherUtils\WeatherRepository.cs" />
+    <Compile Include="Logics\ZodiacFetcher.cs" />
+    <Compile Include="UI\AppIdOptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AppIdOptionsForm.Designer.cs">
+      <DependentUpon>AppIdOptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FilteredPhotosDisplayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FilteredPhotosDisplayForm.Designer.cs">
+      <DependentUpon>FilteredPhotosDisplayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FilterOptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FilterOptionsForm.Designer.cs">
+      <DependentUpon>FilterOptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI\FilteredPhotosDisplayForm.resx">
+      <DependentUpon>FilteredPhotosDisplayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FilterOptionsForm.resx">
+      <DependentUpon>FilterOptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Logics\Resources\denined.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Logics\Resources\if_key_login_71003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Logics\Resources\if_Presentation_27867.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Logics\Resources\if_Text Document_27884.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Logics\Resources\nextIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Logics\Resources\previousIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Logics\Resources\scanIcon.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
